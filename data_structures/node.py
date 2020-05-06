@@ -49,7 +49,7 @@ class JumpListNode(LinkedListNode):
     def __init__(self, val):
         super().__init__(val)
         self.jump = None
-        self.order = None
+        self.order = -1
 
     def __str__(self):
         '''
