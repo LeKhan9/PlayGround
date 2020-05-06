@@ -1,5 +1,5 @@
 from collections import deque
-from utils.graph.factory import generate_sample_graph
+from utils.factory.graph import generate_sample_graph
 
 
 
