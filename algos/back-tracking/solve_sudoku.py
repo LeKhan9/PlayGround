@@ -26,7 +26,6 @@ def solve(row, col, board):
         if is_valid_placement(board, row, col, char_option):
             board[row][col] = char_option
 
-
             if solve(row, col + 1, board):
                 return True
 
