@@ -3,6 +3,7 @@ def subsets(arr):
     backtrack(0, [], arr, results)
     return results
 
+
 def backtrack(index, curr, arr, results):
     if index == len(arr):
         results.append(list(curr)) # dump running subset
