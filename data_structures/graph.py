@@ -14,6 +14,9 @@ class Graph:
         if not self.is_directed:
             self.graph[sink].add(source)
 
+    def add_single_node(self, source):
+        self.graph[source] = set()
+
     def get_neighbours(self, node):
         if node not in self.graph:
             raise NodeNotFoundException('Node is not in graph')
@@ -34,6 +37,9 @@ class Graph:
             raise NodeNotFoundException('Sink node is not in graph')
 
         self.graph[source].remove(sink)
+
+    def __contains__(self, item):
+        return item in self.graph
 
     def __str__(self):
         visual_str = ''
