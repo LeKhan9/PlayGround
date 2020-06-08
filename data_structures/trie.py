@@ -57,3 +57,6 @@ class Trie(object):
             curr_trie = curr_trie.get(char)
 
         return True
+
+    def __repr__(self):
+        return f'[{self.root}]'

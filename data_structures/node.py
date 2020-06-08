@@ -89,4 +89,5 @@ class TrieNode(object):
         self.is_word = True
 
     def __repr__(self):
-        return f'[{self.char}] -> children: [{self.children}]'
+        is_sentinal_flag = '***' if self.is_word else ''
+        return f'[{self.char}] -> [{self.children}] {is_sentinal_flag}'
