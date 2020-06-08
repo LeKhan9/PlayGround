@@ -17,6 +17,3 @@ def generate_sample_trie_with_word_list(word_ls=['abe', 'cat', 'ab']):
     '''
 
     return trie
-
-
-print(generate_sample_trie_with_word_list())
