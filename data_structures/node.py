@@ -64,3 +64,29 @@ class JumpListNode(LinkedListNode):
         jump_node_val = self.jump.val if self.jump else None
 
         return f'[{self.val}] --> [{next_node_val}]\n \\ \n  -----> [{jump_node_val}]\n'
+
+
+
+class TrieNode(object):
+    def __init__(self, letter=''):
+        self.children = {}
+        self.is_word = False
+        self.char = letter
+
+    def __contains__(self, item):
+        return item in self.children
+
+    def add_letter(self, letter):
+        self.children[letter] = TrieNode(letter)
+
+    def get(self, letter):
+        return self.children.get(letter)
+
+    def is_complete_word(self):
+        return self.is_word
+
+    def mark_complete_word(self):
+        self.is_word = True
+
+    def __repr__(self):
+        return f'[{self.char}] -> children: [{self.children}]'
