@@ -18,10 +18,20 @@ class NumberHeap():
 
         heapq.heappush(self.arr, itm)
 
-    def pop(self ):
+    def pop(self):
         itm = heapq.heappop(self.arr)
 
         if self.is_max_heap:
             itm = -1 * itm
 
         return itm
+
+    def get_top_n_items(self, n):
+        if n > len(self.arr):
+            n = len(self.arr)
+
+        return [self.pop() for _ in range(n)]
+
+
+    def __len__(self):
+        return len(self.arr)
